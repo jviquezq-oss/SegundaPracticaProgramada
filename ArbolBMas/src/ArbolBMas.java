@@ -123,21 +123,6 @@ public class ArbolBMas {
 
         return hoja.getDatos().get(posicion);
     }
-    // Búsqueda recursiva privada de un nodo a partir de uno inicial
-    /*private boolean buscarNodo(NodoArbolBMas nodo, int llave) {
-        int i = 0;
-        while(i < nodo.getClaves().size() && llave > nodo.getClaves().get(i)) {
-            i++;
-        }
-        if(i < nodo.getClaves().size() && llave == nodo.getClaves().get(i)) {
-            return true;
-        }
-        if(nodo.esHoja()) {
-            return false;
-        } else {
-            return buscarNodo(nodo.getHijos().get(i), llave);
-        }
-    }*/
 
     private NodoArbolBMas buscarHoja(int clave) {
         NodoArbolBMas actual = raiz;
