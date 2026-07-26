@@ -1,20 +1,15 @@
+import java.io.IOException;
+
 public class Main {
 
     public static void main(String[] args) {
-
         ArbolBMas arbol = new ArbolBMas(4);
+        Menu menu = new Menu(arbol);
 
-        arbol.insertar(10);
-        arbol.insertar(20);
-        arbol.insertar(5);
-        arbol.insertar(6);
-        arbol.insertar(15);
-        arbol.insertar(30);
-        arbol.insertar(25);
-        arbol.insertar(40);
-        arbol.insertar(45);
-        arbol.insertar(50);
-
-        arbol.imprimirArbol();
+        try {
+            menu.iniciar();
+        } catch (IOException e) {
+            System.out.println("Error al leer los datos.");
+        }
     }
 }
